@@ -5,6 +5,7 @@ import physioImg from "../assets/physio-2.webp"
 import personalCareImg from "../assets/personal-care.webp"
 import companionImg from "../assets/companion2.webp"
 import specialCareImg from "../assets/special-care.webp"
+import careGiverImg from "../assets/caregiver.webp"
 
 const services = {
   nursing: {
@@ -83,7 +84,7 @@ const services = {
   respite: {
     title: "Respite Services",
     tag: "Flexible Temporary Relief",
-    image: nurseImg,
+    image: careGiverImg,
     description:
        "Our respite care services provide temporary relief for family caregivers, allowing them time to rest, attend to personal matters, or simply recharge. Whether you need support for a few hours or several days, our professionally trained caregivers provide compassionate, reliable care tailored to your loved one’s unique needs. Each client receives a personalized care plan that promotes physical, cognitive, and emotional well-being, giving families peace of mind while taking a well-deserved break.",
     details: [
