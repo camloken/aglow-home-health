@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { Link } from "wouter"
 import Icon from "./icons.jsx"
 import conversationImg from "../assets/conversation.webp"
@@ -29,6 +30,13 @@ const slideImages = [
 
 
 function Home() {
+  useEffect(() => {
+    slideImages.forEach((img) => {
+      const preload = new Image()
+      preload.src = img.src
+    })
+  }, [])
+
   return (
     <div className="home-page">
       <section className="hero-slideshow" aria-label="Aglow Home Care Solution">
@@ -82,7 +90,7 @@ function Home() {
             {services.map((s) => (
             <Link href={"/services/" + s.slug} className="service-card" key={s.slug} onClick={() => window.scrollTo(0, 0)}>
               <span className="service-icon" aria-hidden="true">
-                <Icon name={s.icon} size={32} />
+                <Icon name={s.icon} size={28} />
               </span>
               <h3>{s.title}</h3>
               <p>{s.description}</p>
