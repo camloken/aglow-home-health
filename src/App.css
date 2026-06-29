@@ -1,7 +1,7 @@
 :root {
   --off-white: #f7f6f5;
   --bronze: #ab5a2f;
-  --purple-1: #1b203d; /* #201838; */
+  --purple-1: #1C1C3B; /* #201838; */
   --purple-2: #745093;
   --title-accent: #5a4d89;
   --blue-1: #5384c5;
@@ -319,26 +319,11 @@
 }
 
 @keyframes heroFade {
-  0% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  2% {
-    opacity: 0.4;
-    transform: scale(1.01);
-  }
-  26% {
-    opacity: 0.4;
-    /*transform: scale(1.05);*/
-  }
-  28% {
-    opacity: 0;
-    transform: scale(1.08);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
+  0%   { opacity: 0; transform: scale(1); }
+  2%   { opacity: 0.4; }
+  26%  { opacity: 0.4; }
+  28%  { opacity: 0; transform: scale(1.08); }
+  100% { opacity: 0; transform: scale(1); }
 }
 
 @media (max-width: 880px) {

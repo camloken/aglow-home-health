@@ -3,7 +3,8 @@ import Icon from "./icons.jsx"
 import nurseImg from "../assets/nurse.webp"
 import physioImg from "../assets/physio-2.webp"
 import personalCareImg from "../assets/personal-care.webp"
-import conversationImg from "../assets/conversation.webp"
+import companionImg from "../assets/companion2.webp"
+import specialCareImg from "../assets/special-care.webp"
 
 const services = {
   nursing: {
@@ -53,8 +54,8 @@ const services = {
   },
   companionCare: {
     title: "Companion Care",
-    tag: "Meaningful Relationships",
-    image: conversationImg,
+    tag: "Respectful Companionship",
+    image: companionImg,
     description:
        "Our companion care service provides meaningful social interaction, gentle encouragement, and trusted presence for clients who need support staying connected to the world around them. We focus on companionship that enriches daily life — from shared activities and conversations to accompaniment to appointments and community outings. Compassionate companions bring warmth, engagement, and peace of mind to every visit.",
     details: [
@@ -69,7 +70,7 @@ const services = {
   specializedCare: {
     title: "Specialized Care",
     tag: "Dignity-Centered Care",
-    image: nurseImg,
+    image: specialCareImg,
     description:
         "Expert support delivered in the comfort of home for clients navigating dementia and Alzheimer's disease, post-surgery recovery, or chronic illness management. Our trained care team brings clinical skill alongside genuine compassion, tailoring every visit to the unique needs of each individual.",
     details: [
