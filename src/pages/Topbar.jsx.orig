@@ -31,7 +31,7 @@ function Topbar() {
   return (
     <nav className='topbar'>
       <div className='page-inner'>
-        <Link href="/" className="logo"><img src={aglowLogo} alt='Aglow Home Health' /></Link>
+        <Link href="/" className="logo"><img src={aglowLogo} alt='Aglow Home Care' /></Link>
 
         <button className="hamburger" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
           <span className={`hamburger-line ${mobileOpen ? "open" : ""}`} />

@@ -5,6 +5,7 @@ const services = [
     { slug: "companionCare", icon: "companionCare", title: "Companion Care", description: "Personalized, compassionate care that enriches daily experiences and combats loneliness." },
     { slug: "specializedCare", icon: "specializedCare", title: "Specialized Care", description: "Expert support for dementia and Alzheimer's care, post-surgery recovery, and chronic illness management — delivered with skill and compassion in the home setting." },
     { slug: "respite", icon: "respite", title: "Respite Services", description: "Flexible temporary relief for family caregivers, from short visits to extended support." },
+    { slug: "familyDoctor", icon: "familyDoctor", title: "Family Doctor Support", description: "Coordinate transportation to a family doctor, connect with Aglow-affiliated physicians, or access virtual care from the comfort of home." },
 ]
 
 export default services

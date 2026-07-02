@@ -1,4 +1,5 @@
 import { Link } from "wouter"
+import { getEmail } from "../email.js"
 import services from "./servicesData.js"
 
 function Footer() {
@@ -22,13 +23,12 @@ function Footer() {
             <p>Aglow Home Health</p>
             <p>Unit 20, 217 Hawksbrow Drive NW</p>
             <p>Calgary, Alberta, T3G 3K2</p>
-            <p><a href="tel:+14033757676">1-403-375-7676</a></p>
-            <p><a href="mailto:info@aglowhomecare.ca">info@aglowhomecare.ca</a></p>
+            <p><a href="tel:+14033757242">1-403-375-7242</a></p>
+            <p><a href={"mailto:" + getEmail()}>{getEmail()}</a></p>
             <br />
             <h4 className="hours-heading">Business Hours</h4>
-            <p className="hours-row">Monday – Friday: 8:00 AM – 6:00 PM</p>
-            <p className="hours-row">Saturday: 9:00 AM – 3:00 PM</p>
-            <p className="hours-row">Sunday: Closed</p>
+            <p className="hours-row">Monday – Friday: 24 Hours</p>
+            <p className="hours-row">Saturday-Sunday: 24 Hours</p>
           </div>
 
           {/* Embedded map */}

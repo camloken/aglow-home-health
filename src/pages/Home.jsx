@@ -36,10 +36,11 @@ function Home() {
       preload.src = img.src
     })
   }, [])
+  document.title = "Aglow Home Health — Trusted Home Care in Calgary"
 
   return (
     <div className="home-page">
-      <section className="hero-slideshow" aria-label="Aglow Home Care Solution">
+      <section className="hero-slideshow" aria-label="Aglow Home Health Solution">
         <div className="hero-slides" aria-hidden="true">
           {slideImages.map((image, index) => (
             <img
@@ -52,7 +53,7 @@ function Home() {
           ))}
         </div>
         <div className="hero-content page-inner">
-          <p className="eyebrow">Aglow Home Care</p>
+          <p className="eyebrow">Aglow Home Health</p>
           <h1>Trusted Care & Support<small>,</small> Right at Home.</h1>
           <p>
             Compassionate, reliable, and professional home health care designed
@@ -60,7 +61,7 @@ function Home() {
           </p>
           <div className="hero-actions">
           <a className="hero-action" href="/contact">Book a Consultation</a>
-          <a className="hero-action hero-action--outline" href="tel:+14033757676">Call: 1-403-375-7676</a>
+          <a className="hero-action hero-action--outline" href="tel:+14033757242">Call: 1-403-375-7242</a>
         </div>
         </div>
       </section>
@@ -75,7 +76,7 @@ function Home() {
         <img
            className="service-detail-mid-image"
            src={homeImg}
-           alt=""
+           alt="A caregiver and client sharing a warm moment at home"
          />
       </section>
 

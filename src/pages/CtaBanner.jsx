@@ -1,5 +1,3 @@
-import { Link } from "wouter"
-
 function CtaBanner() {
   return (
     <section className="cta-banner">
@@ -11,7 +9,7 @@ function CtaBanner() {
         </p>
         <div className="hero-actions">
           <a className="hero-action" href="/contact">Book a Consultation</a>
-          <a className="hero-action hero-action--outline" href="tel:+14033757676">Call 1-403-375-7676</a>
+          <a className="hero-action hero-action--outline" href="tel:+14033757242">Call 1-403-375-7242</a>
         </div>
       </div>
     </section>

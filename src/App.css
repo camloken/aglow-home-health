@@ -570,7 +570,6 @@
 .service-detail-mid-image {
   display: block;
   width: 100%;
-  height: 500px;
   object-fit: cover;
   object-position: center top;
   border-radius: 12px;

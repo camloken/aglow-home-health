@@ -1,8 +1,12 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import services from "./servicesData.js"
-import dialogImg from "../assets/dialog.webp"
+import contactImg from "../assets/img-51.webp"
 
 function Contact() {
+  useEffect(() => {
+    document.title = "Contact Us | Aglow Home Health"
+  }, [])
+
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -26,9 +30,9 @@ function Contact() {
   return (
     <div className="contact-page">
       <div className="contact-hero">
-        <img src={dialogImg} alt="Home health care consultation" />
+        <img src={contactImg} alt="Home health care consultation" />
         <div className="contact-hero-text">
-          <p className="section-kicker">Aglow Home Care</p>
+          <p className="section-kicker">Aglow Home Health</p>
           <h1>Start the Coversation</h1>
         </div>
       </div>
@@ -44,7 +48,7 @@ function Contact() {
             </p>
             <p>
               We strive to respond to all inquiries within two business days. For immediate assistance,
-              please call us at <b>1-403-375-7676</b>. Let's start the conversation. We look forward to speaking with you.
+              please call us at <b>1-403-375-7242</b>. Let's start the conversation. We look forward to speaking with you.
             </p>
           </div>
 

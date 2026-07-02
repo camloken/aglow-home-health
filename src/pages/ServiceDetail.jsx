@@ -1,4 +1,5 @@
 import { useParams, Redirect } from "wouter"
+import { useEffect } from "react"
 import Icon from "./icons.jsx"
 import physioImg from "../assets/physio.webp"
 import physioBg from "../assets/physio-2.webp"
@@ -6,12 +7,15 @@ import companionImg from "../assets/companion-care.webp"
 import companionBg from "../assets/companion-1.webp"
 import specialCareImg from "../assets/img-38.webp"
 import specialCareBg from "../assets/img-42.webp"
-import careGiverImg from "../assets/caregiver.webp"
 import nurseInHouseImg from "../assets/img-8.webp"
 import nurseBg from "../assets/img-37.webp"
 import personalCareImg from "../assets/personal-care.webp"
 import personalCareBg from "../assets/img-43.webp"
+import respiteImg from "../assets/respite.webp"
 import respiteBg from "../assets/hands.webp"
+
+import familyDoctorImg from "../assets/img-21.webp"
+import familyDoctorBg from "../assets/doctor-bg.webp"
 
 const services = {
   nursing: {
@@ -96,7 +100,7 @@ const services = {
     title: "Respite Services",
     tag: "Relief for Caregivers",
     backgroundImg: respiteBg,
-    image: careGiverImg,
+    image: respiteImg,
     description:
        "Our respite care services provide temporary relief for family caregivers, allowing them time to rest, attend to personal matters, or simply recharge. Whether you need support for a few hours or several days, our professionally trained caregivers provide compassionate, reliable care tailored to your loved one’s unique needs. Each client receives a personalized care plan that promotes physical, cognitive, and emotional well-being, giving families peace of mind while taking a well-deserved break.",
     details: [
@@ -106,11 +110,31 @@ const services = {
       { title: "Peace of Mind", desc: "Reliable, vetted professionals you can trust in your home." },
     ],
   },
+  familyDoctor: {
+    title: "Doctor Support",
+    tag: "Connected Care",
+    backgroundImg: familyDoctorBg,
+    image: familyDoctorImg,
+    description:
+       "We help connect clients to family doctor services — whether that means coordinating transportation to an existing family physician, matching you with one of the physicians affiliated with Aglow, or accessing virtual care from the comfort of home. Our goal is to make primary care more accessible and reduce barriers to regular check-ups, follow-ups, and preventive health.",
+    details: [
+      { title: "Transportation Coordination", desc: "Arranging safe, dependable transportation to and from your scheduled medical appointments." },
+      { title: "Aglow-Affiliated Physicians", desc: "Connecting clients with family doctors who work alongside Aglow’s care team for coordinated support." },
+      { title: "Virtual Care Access", desc: "Help setting up and joining virtual appointments with your family doctor from the comfort of home." },
+      { title: "Appointment Reminders", desc: "Friendly check-in calls and appointment reminders help ensure you never miss an important visit." },
+      { title: "Follow-Up Support", desc: "Assistance with prescription pickups, lab referrals, and post-appointment care coordination." },
+      { title: "Health Navigation", desc: "Guidance on understanding referrals, specialist visits, and next steps in your care journey." },
+    ],
+  },
 }
 
 function ServiceDetail() {
   const { slug } = useParams()
   const service = services[slug]
+
+  useEffect(() => {
+    document.title = service.title + " | Aglow Home Health"
+  }, [service])
 
   if (!service) {
     return <Redirect to="/" />
@@ -121,7 +145,7 @@ function ServiceDetail() {
        <div className="service-detail-hero">
          <img src={service.backgroundImg} alt={service.title} />
          <div className="service-detail-hero-text">
-           <span className="eyebrow">Aglow Home Care</span>
+           <span className="eyebrow">Aglow Home Health</span>
            <h1>{service.tag}</h1>
            {service.heroTagline && (
              <p className="hero-card-desc">{service.heroTagline}</p>
@@ -136,7 +160,7 @@ function ServiceDetail() {
          <img
            className="service-detail-mid-image"
            src={service.image}
-           alt=""
+           alt={service.title + " care in the comfort of home"}
          />
          <h2 className="service-detail-subtitle">Services Include</h2>
 
