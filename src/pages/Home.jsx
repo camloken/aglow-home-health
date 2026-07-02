@@ -1,29 +1,29 @@
 import { useEffect } from "react"
 import { Link } from "wouter"
 import Icon from "./icons.jsx"
-import conversationImg from "../assets/conversation.webp"
-import nurseImg from "../assets/nurse.webp"
-import physioImg from "../assets/physio.webp"
-import physioImg2 from "../assets/physio-2.webp"
-import seniorImg from "../assets/personal-care.webp"
+import homeImg from "../assets/img-25.webp"
+import slide1Img from "../assets/slide-1.webp"
+import slide2Img from "../assets/slide-2.webp"
+import slide5Img from "../assets/slide-5.webp"
+import slide7Img from "../assets/slide-7.webp"
 
 import services from "./servicesData.js"
 
 const slideImages = [
   {
-    src: nurseImg,
+    src: slide1Img,
     alt: "Caregiver supporting an older adult at home",
   },
   {
-    src: physioImg2,
-    alt: "Health care professional working with a client",
+    src: slide5Img,
+    alt: "Health care professional talking with a client",
   },
   {
-    src: seniorImg,
+    src: slide2Img,
     alt: "Nurse providing compassionate care",
   },
   {
-    src: conversationImg,
+    src: slide7Img,
     alt: "Home health care planning and support",
   },
 ]
@@ -53,7 +53,7 @@ function Home() {
         </div>
         <div className="hero-content page-inner">
           <p className="eyebrow">Aglow Home Care</p>
-          <h1>Professional Care and Trusted Support, Right at Home</h1>
+          <h1>Trusted Care & Support<small>,</small> Right at Home.</h1>
           <p>
             Compassionate, reliable, and professional home health care designed
             to help clients live safely, comfortably, and independently.
@@ -74,7 +74,7 @@ function Home() {
         </p>
         <img
            className="service-detail-mid-image"
-           src={physioImg}
+           src={homeImg}
            alt=""
          />
       </section>

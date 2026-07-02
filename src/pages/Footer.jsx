@@ -20,7 +20,7 @@ function Footer() {
           <div className="footer-col">
             <h4>Contact</h4>
             <p>Aglow Home Health</p>
-            <p>Unit 20, Hawksbrow Drive NW</p>
+            <p>Unit 20, 217 Hawksbrow Drive NW</p>
             <p>Calgary, Alberta, T3G 3K2</p>
             <p><a href="tel:+14033757676">1-403-375-7676</a></p>
             <p><a href="mailto:info@aglowhomecare.ca">info@aglowhomecare.ca</a></p>
@@ -37,7 +37,7 @@ function Footer() {
             <div className="footer-map">
               <iframe
                 title="Aglow Home Health location"
-                src="https://maps.google.com/maps?q=Unit%2020%20Hawksbrow%20Drive%20NW,%20Calgary,%20Alberta%20T3G%203K2&hl=en&z=15&output=embed"
+                src="https://maps.google.com/maps?q=Unit%2020%2C%20217%20Hawksbrow%20Drive%20NW%2C%20Calgary%2C%20Alberta%20T3G%203K2&hl=en&z=15&output=embed"
                 width="100%"
                 
                 style={{ border: 0, borderRadius: "8px" }}

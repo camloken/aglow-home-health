@@ -29,14 +29,13 @@ function Contact() {
         <img src={dialogImg} alt="Home health care consultation" />
         <div className="contact-hero-text">
           <p className="section-kicker">Aglow Home Care</p>
-          <h1>Let's Dialog Together</h1>
+          <h1>Start the Coversation</h1>
         </div>
       </div>
       <div className="page-inner">
         <div className="contact-layout">
           <div className="contact-intro">
-            <p className="section-kicker">We Want to Help</p>
-            <h2>Get in Touch With Us</h2>
+            <h2>Contact Us</h2>
             <p>
               For questions or assistance, please complete the form below. Our dedicated team is here to understand your
               unique needs and help you explore the care options available. If appropriate, one of our nurses can arrange
@@ -93,10 +92,12 @@ function Contact() {
               <span>Message <abbr title="Required">*</abbr></span>
               <textarea name="message" rows={5} required value={form.message} onChange={handleChange} />
             </label>
-
+            <div className="span-2">
+              <button type="submit" className="contact-submit">Submit</button>
+            </div>
             
           </form>
-          <button type="submit" className="contact-submit">Send Message</button>
+          
         </div>
       </div>
     </div>

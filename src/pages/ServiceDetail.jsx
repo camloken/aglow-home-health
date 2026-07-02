@@ -1,17 +1,24 @@
 import { useParams, Redirect } from "wouter"
 import Icon from "./icons.jsx"
-import nurseImg from "../assets/nurse.webp"
-import physioImg from "../assets/physio-2.webp"
-import personalCareImg from "../assets/personal-care.webp"
-import companionImg from "../assets/companion2.webp"
-import specialCareImg from "../assets/special-care.webp"
+import physioImg from "../assets/physio.webp"
+import physioBg from "../assets/physio-2.webp"
+import companionImg from "../assets/companion-care.webp"
+import companionBg from "../assets/companion-1.webp"
+import specialCareImg from "../assets/img-38.webp"
+import specialCareBg from "../assets/img-42.webp"
 import careGiverImg from "../assets/caregiver.webp"
+import nurseInHouseImg from "../assets/img-8.webp"
+import nurseBg from "../assets/img-37.webp"
+import personalCareImg from "../assets/personal-care.webp"
+import personalCareBg from "../assets/img-43.webp"
+import respiteBg from "../assets/hands.webp"
 
 const services = {
   nursing: {
     title: "Nursing Care",
-    tag: "Licensed Practioners",
-    image: nurseImg,
+    tag: "Qualified Practitioners",
+    backgroundImg: nurseBg,
+    image: nurseInHouseImg,
     description:
        "We provide professional in-home nursing services delivered by licensed Registered Nurses (RNs) and Licensed Practical Nurses (LPNs). Our nursing care supports safe transitions, ongoing health management, and improved client outcomes in the home setting. Care plans are individualized, goal-oriented, and regularly reviewed to ensure quality, safety, and continuity of care.",
     details: [
@@ -25,7 +32,8 @@ const services = {
   },
   personalCare: {
     title: "Personal Care",
-    tag: "Respectful In-Home Help",
+    tag: "Respect & Dignity",
+    backgroundImg: personalCareBg,
     image: personalCareImg,
     description:
        "Our personal care and daily living service is designed to help clients maintain comfort, cleanliness, and confidence while staying in the familiarity of their own homes. Our skilled and compassionate caregivers provide gentle, respectful support with everyday routines, including bathing, dressing, grooming, mobility assistance, and more. Every task is carried out with a focus on safety, dignity, and independence, ensuring clients feel valued and empowered throughout their day.",
@@ -40,7 +48,8 @@ const services = {
   },
   physiotherapy: {
     title: "Physiotherapy",
-    tag: "Recovery-Focused Support",
+    tag: "Recovery-Focused",
+    backgroundImg: physioBg,
     image: physioImg,
     description:
        "Our registered physiotherapists develop personalized recovery programs designed to help clients regain strength, improve mobility, and manage pain in the comfort of their own home. Each plan is tailored to individual goals — whether recovering from surgery, managing a chronic condition, or improving balance and confidence. We work closely with physicians and other care providers to ensure coordinated, effective treatment that supports long-term well-being and independence.",
@@ -55,7 +64,8 @@ const services = {
   },
   companionCare: {
     title: "Companion Care",
-    tag: "Respectful Companionship",
+    tag: "Caring & Compassionite",
+    backgroundImg: companionBg,
     image: companionImg,
     description:
        "Our companion care service provides meaningful social interaction, gentle encouragement, and trusted presence for clients who need support staying connected to the world around them. We focus on companionship that enriches daily life — from shared activities and conversations to accompaniment to appointments and community outings. Compassionate companions bring warmth, engagement, and peace of mind to every visit.",
@@ -71,19 +81,21 @@ const services = {
   specializedCare: {
     title: "Specialized Care",
     tag: "Dignity-Centered Care",
+    backgroundImg: specialCareBg,
     image: specialCareImg,
     description:
-        "Expert support delivered in the comfort of home for clients navigating dementia and Alzheimer's disease, post-surgery recovery, or chronic illness management. Our trained care team brings clinical skill alongside genuine compassion, tailoring every visit to the unique needs of each individual.",
+        "Expert support delivered in the comfort of home for clients navigating post-surgery recovery, chronic illness management, dementia and Alzheimer's disease. Our trained care team brings clinical skill alongside genuine compassion, tailoring every visit to the unique needs of each individual.",
     details: [
-        { title: "Dementia & Alzheimer's Care", desc: "Specialized assistance for cognitive decline with a focus on safety, routine, and meaningful engagement." },
-        { title: "Post-Surgery Recovery Support", desc: "Help with mobility, medication reminders, wound care monitoring, and rehabilitation exercises after surgery." },
+       { title: "Post-Surgery Recovery Support", desc: "Help with mobility, medication reminders, wound care monitoring, and rehabilitation exercises after surgery." },
         { title: "Chronic Illness Management", desc: "Ongoing support for managing long-term conditions including diabetes, heart disease, and COPD." },
+        { title: "Dementia & Alzheimer's Care", desc: "Specialized assistance for cognitive decline with a focus on safety, routine, and meaningful engagement." },
         { title: "Pain Management", desc: "Gentle, personalized therapy to reduce pain and improve mobility, balance, strength, and overall comfort" },
       ],
   },
   respite: {
     title: "Respite Services",
-    tag: "Flexible Temporary Relief",
+    tag: "Relief for Caregivers",
+    backgroundImg: respiteBg,
     image: careGiverImg,
     description:
        "Our respite care services provide temporary relief for family caregivers, allowing them time to rest, attend to personal matters, or simply recharge. Whether you need support for a few hours or several days, our professionally trained caregivers provide compassionate, reliable care tailored to your loved one’s unique needs. Each client receives a personalized care plan that promotes physical, cognitive, and emotional well-being, giving families peace of mind while taking a well-deserved break.",
@@ -107,7 +119,7 @@ function ServiceDetail() {
   return (
      <div className="service-detail-page">
        <div className="service-detail-hero">
-         <img src={service.image} alt={service.title} />
+         <img src={service.backgroundImg} alt={service.title} />
          <div className="service-detail-hero-text">
            <span className="eyebrow">Aglow Home Care</span>
            <h1>{service.tag}</h1>
