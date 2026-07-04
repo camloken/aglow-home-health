@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { Link } from "wouter"
 import Icon from "./icons.jsx"
-import homeImg from "../assets/img-25.webp"
+import homeImg from "../assets/home-img.webp"
 import slide1Img from "../assets/slide-1.webp"
 import slide2Img from "../assets/slide-2.webp"
 import slide5Img from "../assets/slide-5.webp"
@@ -36,7 +36,6 @@ function Home() {
       preload.src = img.src
     })
   }, [])
-  document.title = "Aglow Home Health — Trusted Home Care in Calgary"
 
   return (
     <div className="home-page">
@@ -69,9 +68,8 @@ function Home() {
       <section className="home-intro page-inner">
         <h2>Personalized home care that supports independence.</h2>
         <p>
-          "Our mission is to enhance quality of life for every client we serve.
-          We support families, informal caregivers, and people who need care,
-          rehabilitation, palliative support, or help remaining at home."
+          "Our mission is to enhance quality of life for every client we serve. 
+          We provide personalized home care that supports safety, dignity, and independence at home."
         </p>
         <img
            className="service-detail-mid-image"

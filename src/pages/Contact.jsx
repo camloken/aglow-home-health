@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import services from "./servicesData.js"
-import contactImg from "../assets/img-51.webp"
+import contactImg from "../assets/contact-img.webp"
 
 function Contact() {
   useEffect(() => {
@@ -33,7 +33,7 @@ function Contact() {
         <img src={contactImg} alt="Home health care consultation" />
         <div className="contact-hero-text">
           <p className="section-kicker">Aglow Home Health</p>
-          <h1>Start the Coversation</h1>
+          <h1>Start the Conversation</h1>
         </div>
       </div>
       <div className="page-inner">
@@ -41,14 +41,15 @@ function Contact() {
           <div className="contact-intro">
             <h2>Contact Us</h2>
             <p>
-              For questions or assistance, please complete the form below. Our dedicated team is here to understand your
-              unique needs and help you explore the care options available. If appropriate, one of our nurses can arrange
-              an in-home consultation to discuss your situation, assess your home environment, and recommend the level of
-              support that best meets your needs or those of your loved one.
+              For questions or assistance, please complete the form below. Our team will take the time
+              to understand your needs, answer your questions, and help you explore the care options available.
+              If appropriate, one of our nurses may arrange an in-home consultation to discuss your situation,
+              assess the home environment, and recommend the level of support that best fits your needs or the needs
+              of your loved one.
             </p>
             <p>
-              We strive to respond to all inquiries within two business days. For immediate assistance,
-              please call us at <b>1-403-375-7242</b>. Let's start the conversation. We look forward to speaking with you.
+              We strive to respond to all inquires within two business days. For faster support, 
+              please call us at <b>(403)-375-7242</b>. We look forward to speaking with you. 
             </p>
           </div>
 
