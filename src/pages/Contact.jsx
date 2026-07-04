@@ -77,7 +77,7 @@ function Contact() {
             <label>
               <span>Service</span>
               <select name="service" value={form.service} onChange={handleChange}>
-                <option value="">Select a service</option>
+                <option value="">-- Select a service --</option>
                 {services.map((s) => (
                   <option key={s.slug} value={s.slug}>{s.title}</option>
                 ))}
@@ -87,7 +87,7 @@ function Contact() {
             <label>
               <span>Best Time to Call</span>
               <select name="bestTime" value={form.bestTime} onChange={handleChange}>
-                <option value="">Select a time</option>
+                <option value="">-- Select a time --</option>
                 <option value="morning">Morning</option>
                 <option value="afternoon">Afternoon</option>
               </select>

@@ -215,6 +215,9 @@
   .topbar {
     min-height: 84px;
   }
+  .topbar .logo img {
+    height: 56px;
+  }
 
   .hero-slideshow {
     min-height: 50vh;
@@ -884,8 +887,19 @@
   opacity: 0.85;
 }
 
-.contact-form .span-2 {
-  grid-column: span 2;
+ .contact-form .span-2 {
+   grid-column: span 2;
+ }
+@media (max-width: 680px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+ .contact-form .span-2 {
+   grid-column: span 1;
+ }
+  .contact-submit {
+    width: 100%;
+  }
 }
 
 /* ── CTA Banner ── */
