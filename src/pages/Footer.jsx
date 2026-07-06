@@ -1,3 +1,5 @@
+// Unit 170, 198 Nolanridge Cresent, Calgary, Alberta, T3R 1W9
+
 import { Link } from "wouter"
 import { getEmail } from "../email.js"
 import services from "./servicesData.js"
@@ -21,8 +23,8 @@ function Footer() {
           <div className="footer-col">
             <h4>Contact</h4>
             <p>Aglow Home Health</p>
-            <p>Unit 20, 217 Hawksbrow Drive NW</p>
-            <p>Calgary, Alberta, T3G 3K2</p>
+            <p>Unit 170, 190 Nolanridge Cr. NW</p>
+            <p>Calgary, Alberta, T3R 1W9</p>
             <p><a href="tel:+14033757242">1-403-375-7242</a></p>
             <p><a href={"mailto:" + getEmail()}>{getEmail()}</a></p>
             <br />
@@ -37,7 +39,7 @@ function Footer() {
             <div className="footer-map">
               <iframe
                 title="Aglow Home Health location"
-                src="https://maps.google.com/maps?q=Unit%2020%2C%20217%20Hawksbrow%20Drive%20NW%2C%20Calgary%2C%20Alberta%20T3G%203K2&hl=en&z=15&output=embed"
+                src="https://maps.google.com/maps?q=Unit%20170%2C%20198%20Nolanridge%20Cresent%20NW%2C%20Calgary%2C%20Alberta%20T3R%201W9&hl=en&z=15&output=embed"
                 width="100%"
                 
                 style={{ border: 0, borderRadius: "8px" }}

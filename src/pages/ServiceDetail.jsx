@@ -111,12 +111,12 @@ const services = {
     ],
   },
   familyDoctor: {
-    title: "Doctor Support",
+    title: "Family Doctor Support",
     tag: "Connected Care",
     backgroundImg: familyDoctorBg,
     image: familyDoctorImg,
     description:
-       "We help connect clients to family doctor services — whether that means coordinating transportation to an existing family physician, matching you with one of the physicians affiliated with Aglow, or accessing virtual care from the comfort of home. Our goal is to make primary care more accessible and reduce barriers to regular check-ups, follow-ups, and preventive health.",
+       "We help connect clients with family doctor services to ensure they have access to ongoing primary healthcare. Our goal is to make primary care more accessible and support clients in establishing and maintaining a long-term relationship with a family physician for continuity of care and better overall health.",
     details: [
       { title: "Transportation Coordination", desc: "Arranging safe, dependable transportation to and from your scheduled medical appointments." },
       { title: "Aglow-Affiliated Physicians", desc: "Connecting clients with family doctors who work alongside Aglow’s care team for coordinated support." },
