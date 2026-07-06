@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react"
 import services from "./servicesData.js"
 import contactImg from "../assets/contact-img.webp"
+import emailjs from "@emailjs/browser"
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 function Contact() {
   useEffect(() => {
@@ -16,6 +21,8 @@ function Contact() {
     bestTime: "",
     message: "",
   })
+  const [submitting, setSubmitting] = useState(false)
+  const [status, setStatus] = useState(null) // "sent" | "error" | null
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -23,8 +30,47 @@ function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    // TODO: send form data
-    console.log("Form submitted", form)
+    setSubmitting(true)
+    setStatus(null)
+
+    const serviceLabel = services.find((s) => s.slug === form.service)
+    const serviceText = serviceLabel ? serviceLabel.title : form.service
+
+    emailjs
+      .send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          first_name: form.firstName,
+          last_name: form.lastName,
+          email: form.email,
+          phone: form.phone || "not provided",
+          service: serviceText || "not specified",
+          best_time: form.bestTime || "not specified",
+          message: form.message,
+          to_name: "Aglow Home Health Team",
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY },
+      )
+      .then(
+        () => {
+          setStatus("sent")
+          setForm({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            service: "",
+            bestTime: "",
+            message: "",
+          })
+        },
+        (error) => {
+          console.error("EmailJS send failed:", error)
+          setStatus("error")
+        },
+      )
+      .finally(() => setSubmitting(false))
   }
 
   return (
@@ -59,7 +105,7 @@ function Contact() {
               <input type="text" name="firstName" required value={form.firstName} onChange={handleChange} />
             </label>
 
-             <label>
+            <label>
               <span>Last Name <abbr title="Required">*</abbr></span>
               <input type="text" name="lastName" required value={form.lastName} onChange={handleChange} />
             </label>
@@ -97,8 +143,22 @@ function Contact() {
               <span>Message <abbr title="Required">*</abbr></span>
               <textarea name="message" rows={5} required value={form.message} onChange={handleChange} />
             </label>
+
+            {status === "sent" && (
+              <div className="span-2 form-status form-status--success">
+                Thanks! Your message has been sent. We'll get back to you within two business days.
+              </div>
+            )}
+            {status === "error" && (
+              <div className="span-2 form-status form-status--error">
+                Something went wrong. Please try again or call us at (403)-375-7242.
+              </div>
+            )}
+
             <div className="span-2">
-              <button type="submit" className="contact-submit">Submit</button>
+              <button type="submit" className="contact-submit" disabled={submitting}>
+                {submitting ? "Sending..." : "Submit"}
+              </button>
             </div>
             
           </form>
