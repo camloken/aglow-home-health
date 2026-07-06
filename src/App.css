@@ -377,6 +377,14 @@
   color: var(--purple-2);
 }
 
+.services-grid .service-card:last-child {
+  transform: translateX(50%);
+}
+
+.services-grid .service-card:last-child:hover {
+  transform: translateX(50%) scale(1.03);
+}
+
 .service-card h3 {
   margin: 0 0 10px;
   font-size: 1.22rem;
@@ -448,6 +456,11 @@
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .services-grid .service-card:last-child,
+  .services-grid .service-card:last-child:hover {
+    transform: none;
   }
 
   .service-card {
