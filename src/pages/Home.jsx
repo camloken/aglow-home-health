@@ -59,7 +59,7 @@ function Home() {
             to help clients live safely, comfortably, and independently.
           </p>
           <div className="hero-actions">
-          <a className="hero-action" href="/contact">Book a Consultation</a>
+          <Link className="hero-action" href="/contact">Book a Consultation</Link>
           <a className="hero-action hero-action--outline" href="tel:+14033757242">Call: 1-403-375-7242</a>
         </div>
         </div>
