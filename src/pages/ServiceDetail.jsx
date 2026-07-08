@@ -141,7 +141,7 @@ function ServiceDetail() {
   }
 
   return (
-     <div className="service-detail-page">
+     <div className="service-detail-page" key={slug}>
        <div className="service-detail-hero">
          <img src={service.backgroundImg} alt={service.title} />
          <div className="service-detail-hero-text">
